@@ -1,12 +1,15 @@
-// A variable declared in global scope is available to all functions
-var hello = "Hello"; 
+// A letiable declared in global scope is available to all functions
+let hello = "Hello";
 
 function sayHello() {
+  let function1scope = 'im in backyard 1';
+  console.log(function1scope);
   console.log(hello);
   return;
 }
 
-var sayHelloAgain = function () {
+
+let sayHelloAgain = function () {
   console.log(hello);
   return;
 };
@@ -14,22 +17,22 @@ var sayHelloAgain = function () {
 sayHello();
 sayHelloAgain();
 
-//A variable declared in local scope is only available to that function
-function sayGoodbye() { 
-  var goodbye = "Goodbye";
+//A letiable declared in local scope is only available to that function
+function sayGoodbye() {
+  let goodbye = "Goodbye";
   console.log(goodbye);
   return;
 }
 
 //This will throw an error
-var sayGoodbyeAgain = function () { 
+let sayGoodbyeAgain = function () {
   console.log(goodbye);
   return;
 };
 
-// Shadowing happens when the same variable is used in the local and global scope
-var shadow = "Hello";
- console.log(shadow);
+// Shadowing happens when the same letiable is used in the local and global scope
+let shadow = "Hello";
+console.log(shadow);
 
 // Logs "Hello"
 function sayWhat() {
@@ -38,11 +41,16 @@ function sayWhat() {
 }
 
 //Logs "Goodbye"
-var sayWhatAgain = function () {
-  var shadow = "Goodbye";
-  console.log(shadow);   
+let sayWhatAgain = function () {
+  let shadow = "Goodbye";
+  console.log(shadow);
 };
+console.log(shadow);
+console.log(shadow);
+console.log(shadow);
+console.log(shadow);
+console.log(shadow);
+console.log(shadow);
 
-sayGoodbye();
 sayWhat();
 sayWhatAgain();

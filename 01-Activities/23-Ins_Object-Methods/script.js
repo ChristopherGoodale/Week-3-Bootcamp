@@ -7,14 +7,23 @@ var planet = {
   population: "7.594 billion",
   // Objects can store arrays in a key-value pair
   neighboringPlanets: ["Mars", "Venus"],
+  isOnFire: false,
+  funFacts: ['fact 1', 'fact 2', 'fact 3', 'fact 4'],
+
   // Objects can also store methods
   tellFunFact: function () {
+
     console.log("The earth is the only planet in our solar system not named after a Roman god or goddess.");
   },
   showWarning: function () {
     console.log("Space junk falls into Earth's atmosphere at a rate of about one a day.");
+  },
+  toggleFire: function () {
+    this.isOnFire = !this.isOnFire;
   }
 };
+
+
 
 // To access a value in an array, use the name of the object, the key and the index.
 // Logs "Mars" using dot notation
@@ -26,4 +35,5 @@ console.log(planet["neighboringPlanets"][0]);
 // To call a method, use the name of the object and the key. Don't forget the ()!
 planet.tellFunFact();
 planet.showWarning();
-  
+
+console.log(planet.isOnFire);

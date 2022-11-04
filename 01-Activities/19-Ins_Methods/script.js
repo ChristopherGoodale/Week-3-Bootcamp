@@ -1,11 +1,22 @@
-var comparisonOperators = ["Equal", "Not Equal", "Strict Equal", "Strict Not Equal", "Greater Than", "Less Than"];
-var arithmaticOperators = ["+", "-", "%"];
-var logicalOperators = ["and", "or", "not"];
-var myString = "Hello String";
+let person = {
+    firstName: 'David',
+    lastName: 'Blaine',
+    getFirstName() {
+        return this.firstName;
+    },
+};
+
+console.log(person.getFirstName());
+console.log(person.firstName)
+
+let comparisonOperators = ["Equal", "Not Equal", "Strict Equal", "Strict Not Equal", "Greater Than", "Less Than"];
+let arithmaticOperators = ["+", "-", "%"];
+let logicalOperators = ["and", "or", "not"];
+let myString = "Hello String";
 
 //Array Methods
 // Sorts comparisonOperators array and returns the sorted array
-comparisonOperators.sort(); 
+comparisonOperators.sort();
 
 //Logs sorted array
 console.log(comparisonOperators);
@@ -17,7 +28,7 @@ arithmaticOperators.push("%");
 console.log(arithmaticOperators);
 
 //Returns selected elements as a new array.
-var logicalOperatorsSliced = logicalOperators.slice(0,2);
+let logicalOperatorsSliced = logicalOperators.slice(0, 2);
 
 //Logs new array
 console.log(logicalOperatorsSliced);
@@ -27,7 +38,7 @@ console.log(logicalOperators);
 
 //String Methods
 //Replaces "String" with "World" and returns new string
-var myNewString = myString.replace("String", "World");
+let myNewString = myString.replace("String", "World");
 console.log(myNewString);
 
 //The orginal string is unchanged
